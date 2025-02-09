@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Search Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f4f4;
+            color: #000000;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center; /* Center text for all elements */
+        }
+
+        /* Navbar style */
+
+        .search-container {
+            margin: 80px 0 20px; /* Adjust margin to account for fixed navbar */
+            display: flex;
+            flex-direction: column; /* Arrange items in a column */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 600px;
+            font-size: 16px;
+            margin-top: 50px;
+            border-radius: 20px;
+            border: 2px solid #ccc;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px; /* Add margin to separate the button from the input */
+            border-radius: 20px;
+            border: 2px solid #ccc;
+            background-color: #eb1f1f;
+            color: white;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+
+        .search-button:hover {
+            background-color: #c71a1a;
+        }
+
+        .letters {
+            margin: 10px;
+        }
+        
+        nav {
+            background-color: #eb1f1f;
+            padding: 5px;
+            position: fixed;
+            z-index:3;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 1px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+        .nav-logo {
+            height: 60px; /* Adjust the height as needed */
+            width: auto;  /* Maintain aspect ratio */
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item {
+            padding: 14px 20px;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin-top: 60px; /* Adjust for fixed navbar */
+            
+        }
+
+        /* Grid item */
+        .grid-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .grid-item button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Button style */
+        .grid-item button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            text-align: center;
+        }
+
+        button:hover {
+            color: #eb1f1f;
+        }   
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="RUCourseReady.html">Home</a></li>
+            <li class="nav-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rutgers_Scarlet_Knights_logo.svg/1200px-Rutgers_Scarlet_Knights_logo.svg.png" alt="Logo" class="nav-logo"></li>
+            <li class="nav-item"><a href="RUScheduleGenerator.html">Schedules</a></li>
+        </ul>
+    </nav>
+        
+    <div class="search-container">
+        <input type="text" placeholder="Search Course/Key Word">
+        
+            <button class="search-button"><a href="RURatingCalc1.html">Search</a></button>
+        
+    </div>
+
+    <div class="grid-container">
+        <h2 class="letters">A</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Accounting (010)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Administrative Studies (011)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">African Studies (016)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">African, Middle Eastern, and South Asian Languages and Literatures (013)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject5.html'">Africana Studies (014)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject6.html'">Agricultural and Natural Resource Management (035)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject7.html'">Agriculture and Food Systems (020)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject8.html'">Alcohol Studies (047)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject9.html'">American Studies (050)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject10.html'">Animal Science (067)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject11.html'">Anthropology (070)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject12.html'">Arabic Languages (074)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject13.html'">Armenian (078)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject14.html'">Art (080)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject15.html'">Art (081)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject16.html'">Art History (082)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject17.html'">Arts and Sciences (090)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject18.html'">Asian Studies (098)</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="letters">B</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Biochemistry (115)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Bioenvironmental Engineering (117)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">Biological Sciences (119)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">Biomaterials and Biofabrication (133)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject5.html'">Biomathematics (122)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject6.html'">Biomedical Engineering (125)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject7.html'">Biotechnology (126)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject8.html'">Business Analytics and Information Technology (136)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject9.html'">Business Law (140)</button>
+        </div>
+        </div>
+
+    <div class="grid-container">
+        <h2 class="letters">C</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Cell Biology and Neuroscience (146)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Chemical and Biochemical Engineering (155)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">Chemical Biology (158)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">Chemistry (160)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject5.html'">Chinese (165)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject6.html'">Cinema Studies (175)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject7.html'">Civil and Environmental Engineering (180)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject8.html'">Classics (190)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject9.html'">Cognitive Science (185)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject10.html'">Communication (192)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject11.html'">Communication and Media Studies (189)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject12.html'">Community Health Outreach (193)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject13.html'">Comparative Literature (195)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject14.html'">Computer Science (198)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject15.html'">Criminal Justice (202)</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="letters">D</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Dance (203)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Dance (206)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">Dance Education (207)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">Data Science (219)</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="letters">E</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Ecology, Evolution and Natural Resources (216)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Economics (220)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">Education (300)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">Educational Opportunity Fund (364)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject5.html'">Electrical and Computer Engineering (332)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject6.html'">English - Composition and Writing (355)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject7.html'">English - Creative Writing (351)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject8.html'">English - Film Studies (354)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject9.html'">English - Literary Theory (353)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject10.html'">English - Literature (358)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject11.html'">English - Theories and Methods (359)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject12.html'">English As A Second Language (356)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject13.html'">Entomology (370)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject14.html'">Entrepreneurship (382)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject15.html'">Environmental and Biological Sciences (015)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject16.html'">Environmental and Business Economics (373)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject17.html'">Environmental Planning and Design (573)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject18.html'">Environmental Policy, Institutions and Behavior (374)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject17.html'">Environmental Sciences (375)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject18.html'">Environmental Studies (381)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject17.html'">Ethics in Business Environment (522)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject18.html'">European Studies (360)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject17.html'">Exchange (001)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject18.html'">Exercise Science (377)</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="letters">F</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Film Studies (387)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Filmmaking (211)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject5.html'">Finance (390)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">Food Science (400)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">French (420)</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <h2 class="letters">G</h2>
+        <div class="grid-item">
+            <button onclick="location.href='subject1.html'">Accounting (010)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject2.html'">Administrative Studies (011)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject3.html'">African Studies (016)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject4.html'">African, Middle Eastern, and South Asian Languages and Literatures (013)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject5.html'">Africana Studies (014)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject6.html'">Agricultural and Natural Resource Management (035)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject7.html'">Agriculture and Food Systems (020)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject8.html'">Alcohol Studies (047)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject9.html'">American Studies (050)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject10.html'">Animal Science (067)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject11.html'">Anthropology (070)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject12.html'">Arabic Languages (074)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject13.html'">Armenian (078)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject14.html'">Art (080)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject15.html'">Art (081)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject16.html'">Art History (082)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject17.html'">Arts and Sciences (090)</button>
+        </div>
+        <div class="grid-item">
+            <button onclick="location.href='subject18.html'">Asian Studies (098)</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RU Sign In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #eb1f1f;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    input {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #eb1f1f;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .register-button {
+      background-color: #555;
+    }
+    .register-button:hover {
+      background-color: #eb1f1f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RU Course Ready</h1>
+  </header>
+  
+  <section>
+    <h2>Sign In</h2>
+    <form id="signInForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required><br>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <button type="submit">Sign In</button>
+      <button type="button" class="register-button" onclick="location.href='RUSignUp.html'">Don't have an account? Register here!</button>
+      
+    </form>
+  </section>
+
+  <script src="signin.js"></script>
+</body>
+</html>

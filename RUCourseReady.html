@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Navbar and Profile</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f4f4;
+            color: #000000;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center; /* Center text for all elements */
+        }
+
+        /* Navbar style */
+        nav {
+            background-color: #eb1f1f;
+            padding: 5px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 1px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        .nav-logo {
+            height: 60px; /* Adjust the height as needed */
+            width: auto;  /* Maintain aspect ratio */
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item {
+            padding: 14px 20px;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .profile-pic {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            flex-direction: column; /* Stack elements top to bottom */
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background-color: #fff;
+            margin: 0px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 120px; /* Add margin to account for fixed navbar */
+        }
+
+        .profile-section h1 {
+            margin-bottom: 20px;
+        }
+
+        .profile-section h2 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 500px;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+        }
+
+        .bolder {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .enlargeTitle {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="RUSubjects.html">Subjects</a></li>
+            <li class="nav-item">
+                <a href="RUSignIn.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rutgers_Scarlet_Knights_logo.svg/1200px-Rutgers_Scarlet_Knights_logo.svg.png" alt="Logo" class="nav-logo">
+                </a>
+            </li>
+            <li class="nav-item"><a href="RUScheduleGenerator.html">Schedules</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <h1 class="enlargeTitle">RU Course Ready</h1>
+        
+        <p class="bolder">Enter your course to get started:</p>
+        <form aid="signUpForm">
+            <input type="text" placeholder="Enter Course Name/Code">
+        </form>
+    </div>
+
+</body>
+
+</html>

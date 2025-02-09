@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RU Course Ready - Schedule Generator</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #eb1f1f;
+            padding: 5x;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 1px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+        .nav-logo {
+            height: 60px; /* Adjust the height as needed */
+            width: auto;  /* Maintain aspect ratio */
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item {
+            padding: 14px 20px;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #eb1f1f;
+            border-bottom: 2px solid #eb1f1f;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .add-course-button {
+            background-color: #eb1f1f;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .dropdown {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+
+        .generate-button {
+            background-color: #eb1f1f;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            font-size: 1.2em;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rutgers_Scarlet_Knights_logo.svg/1200px-Rutgers_Scarlet_Knights_logo.svg.png" alt="Logo" class="nav-logo"></li>
+            <li class="nav-item"><a href="#schedules">Schedules</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>RU Course Ready</h1>
+
+        <div class="section">
+            <h2>Added Courses</h2>
+            <button class="add-course-button">+</button>
+        </div>
+
+        <div class="section">
+            <h2>Search for Additional Courses</h2>
+            <input type="text" class="search-bar" placeholder="Search for courses...">
+        </div>
+
+        <div class="section">
+            <h2>Graduation Date</h2>
+            <select class="dropdown">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <select class="dropdown">
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h2>Semester</h2>
+            <div class="radio-group">
+                <input type="radio" id="fall" name="semester" value="Fall">
+                <label for="fall">Fall</label>
+                <input type="radio" id="spring" name="semester" value="Spring">
+                <label for="spring">Spring</label>
+            </div>
+        </div>
+
+        <button class="generate-button">Generate Schedule</button>
+    </div>
+</body>
+</html>

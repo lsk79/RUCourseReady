@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Navbar and Profile</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f4f4f4;
+            color: #000000;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center; /* Center text for all elements */
+        }
+
+        /* Navbar style */
+        nav {
+            background-color: #eb1f1f;
+            padding: 5px;
+            position: fixed;
+            z-index: 3;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 1px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+        .nav-logo {
+            height: 60px; /* Adjust the height as needed */
+            width: auto;  /* Maintain aspect ratio */
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item {
+            padding: 14px 20px;
+        }
+
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            flex-direction: column; /* Stack elements top to bottom */
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            margin-top: 110px; /* Add margin to account for fixed navbar */
+        }
+
+        .profile-section h1 {
+            margin-bottom: 10px;
+        }
+
+        .profile-section h2 {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 500px;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+        }
+
+        .box {
+            width: 800px;
+            background-color: rgb(231, 231, 231);
+            border: 2px solid rgb(224, 224, 224);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px 0; /* Add margin to create space between boxes */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box button {
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .rating-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .rating-item {
+            background-color: #eb1f1f;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rating-item.empty {
+            background-color: #ccc;
+        }
+
+        .box button:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .box .plus-button {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 10px;
+            flex-grow: 0;
+        }
+
+        .box .plus-button:hover {
+            color: #000;
+        }
+
+        .box-content {
+            text-align: left;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#subjects">Subjects</a></li>
+            <li class="nav-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rutgers_Scarlet_Knights_logo.svg/1200px-Rutgers_Scarlet_Knights_logo.svg.png" alt="Logo" class="nav-logo"></li>
+            <li class="nav-item"><a href="#schedules">Schedules</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <h1 class="titleU">RU Course Ready</h1>
+       
+        <div class="container">
+            <div class="box">
+                <div>Calculus I (01:640:135)</div>
+            </div>
+            <div class="box">
+                <div class="box-content">
+                    Math 135 provides an introduction to calculus, covering limits and continuity, the derivative and tangent lines, applications of the derivative, and basic integration. Math 151 is another introductory calculus course. 
+                    <!-- blank line/line break -->
+                    <br>
+                    <br>
+                    <p>Course Page:</p>
+                    <a href="url">https://math.rutgers.edu/academics/undergraduate/courses/938-01-640-135-calculus-i</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">Ratings</div>
+                <br>
+                <div class="rating-box">
+                    <div class="rating-item">
+                        <p>Difficulty</p>
+                        <div class="rating-box">
+                            <div class="rating-item"></div>
+                            <div class="rating-item"></div>
+                            <div class="rating-item"></div>
+                            <div class="rating-item"></div>
+                            <div class="rating-item empty"></div>
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <p>Average Grade</p>
+                        <div class="rating-box">
+                            <div class="rating-item">B</div>
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <p>Textbook</p>
+                        <div class="rating-box">
+                            <div class="rating-item">Yes</div>
+                            <div class="rating-item empty">No</div>
+                        </div>
+                    </div>
+                    <div class="rating-item">
+                        <p>Curve</p>
+                        <div class="rating-box">
+                            <div class="rating-item">Yes</div>
+                            <div class="rating-item empty">No</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="box-content">List of Materials: 
+                    <br>
+                    <br>
+                    <p>Pearson Access</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content">Comments</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
